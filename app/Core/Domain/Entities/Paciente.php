@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace App\Core\Domain\Entities;
@@ -13,20 +12,30 @@ class Paciente extends Pessoa
      * Create a new class instance.
      */
     public function __construct(
-        public readonly string $nome,
-        public readonly string $sobrenome,
-        public readonly ?string $rg,
-        public readonly ?string $cpf,
-        public readonly Endereco $endereco,
+        string $nome,
+        string $sobrenome,
+        ?string $rg,
+        ?string $cpf,
+        Endereco $endereco,
         public readonly string $sexo,
         public readonly DateTime $data_nascimento,
     ) {
         parent::__construct(
-            $this->nome,
-            $this->sobrenome,
-            $this->rg,
-            $this->cpf,
-            $this->endereco
+            nome: $nome,
+            sobrenome: $sobrenome,
+            rg: $rg,
+            cpf: $cpf,
+            endereco: $endereco
         );
+    }
+
+    public function cep(): string 
+    {
+        return $this->endereco->cep;
+    }
+
+    public function rua(): string 
+    {
+        return $this->endereco->rua;
     }
 }
