@@ -25,8 +25,8 @@ class CriarPaciente
             rg: $rg,
             cpf: $cpf,
             endereco: $endereco,
-            data_nascimento: $data_nascimento,
             sexo: $sexo,
+            data_nascimento: $data_nascimento,
         );
     }
 }

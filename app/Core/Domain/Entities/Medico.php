@@ -36,9 +36,9 @@ class Medico extends Funcionario
             nome: $nome,
             sobrenome: $sobrenome,
             matricula: $matricula,
+            endereco: $endereco,
             rg: $rg,
             cpf: $cpf,
-            endereco: $endereco,
         );
     }
 }

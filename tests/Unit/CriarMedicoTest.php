@@ -7,7 +7,7 @@ use App\Core\Domain\Entities\Medico;
 use App\Core\Domain\UseCases\CriarMedico;
 use App\Core\Domain\UseCases\GerarMatricula;
 
-it('use case de cadastro de medico', function () {
+it('use case de cadastro de medico', function (): void {
     $matricula = (new GerarMatricula())->execute();
 
     $endereco = new Endereco(cep:'45778989877', rua: 'rua doutor');
@@ -17,8 +17,8 @@ it('use case de cadastro de medico', function () {
         sobrenome:'dos santos',
         crm:'crm',
         matricula:$matricula,
-        rg: '193040303',
         cpf:'404033349',
+        rg: '193040303',
         endereco:$endereco
     );
 
@@ -27,14 +27,14 @@ it('use case de cadastro de medico', function () {
     $medico = $criarMedico->execute(
         nome:$newMedico->nome,
         sobrenome:$newMedico->sobrenome,
-        crm: $newMedico->crm,
-        matricula:$newMedico->matricula,
-        rg: $newMedico->rg,
         cpf: $newMedico->cpf,
-        endereco: $newMedico->endereco
+        rg: $newMedico->rg,
+        matricula:$newMedico->matricula,
+        endereco: $newMedico->endereco,
+        crm: $newMedico->crm
     );
 
-    expect(Medico::class)->toBeClass(Medico::class);
+    expect(Medico::class)->toBeClass();
 
     expect($newMedico)->toEqual($medico);
 

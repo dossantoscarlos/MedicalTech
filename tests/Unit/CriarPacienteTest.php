@@ -7,7 +7,7 @@ use App\Core\Domain\Entities\Endereco;
 use App\Core\Domain\Entities\Paciente;
 use App\Core\Domain\UseCases\CriarPaciente;
 
-it('use case criar paciente', function () {
+it('use case criar paciente', function (): void {
 
     $aniversario = '1991-04-10';
     $data = new DateTime($aniversario);
@@ -33,11 +33,11 @@ it('use case criar paciente', function () {
         rg:$newPaciente->rg,
         cpf:$newPaciente->cpf,
         endereco: $newPaciente->endereco,
-        sexo: $newPaciente->sexo,
-        data_nascimento: $newPaciente->data_nascimento
+        data_nascimento: $newPaciente->data_nascimento,
+        sexo: $newPaciente->sexo
     );
 
-    expect(Paciente::class)->toBeClass($paciente);
+    expect(Paciente::class)->toBeClass();
 
     expect($newPaciente)->toEqual($paciente);
 });

@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace App\Core\Domain\Entities;
@@ -22,11 +21,11 @@ class Paciente extends Pessoa
         public readonly DateTime $data_nascimento,
     ) {
         parent::__construct(
-            nome: $nome,
-            sobrenome: $sobrenome,
-            rg: $rg,
-            cpf: $cpf,
-            endereco: $endereco
+          nome: $nome,
+          sobrenome: $sobrenome,
+          cpf: $cpf,
+          rg: $rg,
+          endereco: $endereco
         );
     }
 
