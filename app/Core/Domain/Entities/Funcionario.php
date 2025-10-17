@@ -18,11 +18,11 @@ class Funcionario extends Pessoa
         ?string $cpf,
     ) {
         parent::__construct(
-          nome: $nome,
-          sobrenome: $sobrenome,
-          cpf: $cpf,
-          rg: $rg,
-          endereco: $endereco,
+            nome: $nome,
+            sobrenome: $sobrenome,
+            cpf: $cpf,
+            rg: $rg,
+            endereco: $endereco,
         );
     }
 
