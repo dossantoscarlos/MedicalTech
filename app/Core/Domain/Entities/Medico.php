@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Core\Domain\Entities;
 
-
 /**
  *
  * Entidade Medico extends Funcionario e Pessoa
@@ -32,15 +31,14 @@ class Medico extends Funcionario
         ?string $cpf,
         ?string $rg,
         Endereco $endereco,
-    ) 
-    {
+    ) {
         parent::__construct(
             nome: $nome,
             sobrenome: $sobrenome,
             matricula: $matricula,
+            endereco: $endereco,
             rg: $rg,
             cpf: $cpf,
-            endereco: $endereco,
         );
     }
 }

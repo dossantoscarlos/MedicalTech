@@ -21,20 +21,20 @@ class Paciente extends Pessoa
         public readonly DateTime $data_nascimento,
     ) {
         parent::__construct(
-            nome: $nome,
-            sobrenome: $sobrenome,
-            rg: $rg,
-            cpf: $cpf,
-            endereco: $endereco
+          nome: $nome,
+          sobrenome: $sobrenome,
+          cpf: $cpf,
+          rg: $rg,
+          endereco: $endereco
         );
     }
 
-    public function cep(): string 
+    public function cep(): string
     {
         return $this->endereco->cep;
     }
 
-    public function rua(): string 
+    public function rua(): string
     {
         return $this->endereco->rua;
     }

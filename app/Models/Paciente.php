@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Paciente extends Model
 {
     protected $tables = 'pacientes';
+
     protected $fillable = [
         'nome', 'sobrenome', 'sexo', 'data_nascimento',
         ''

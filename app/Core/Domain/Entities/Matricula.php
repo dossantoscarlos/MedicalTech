@@ -6,14 +6,11 @@ namespace App\Core\Domain\Entities;
 
 class Matricula
 {
-    private string $matricula;
-
     /**
      * Create a new class instance.
      */
-    public function __construct(string $matricula)
+    public function __construct(private readonly string $matricula)
     {
-        $this->matricula = $matricula;
     }
 
     public function getMatricula(): string

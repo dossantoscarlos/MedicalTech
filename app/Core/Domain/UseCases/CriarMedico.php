@@ -23,11 +23,11 @@ class CriarMedico
         return new Medico(
             nome:$nome,
             sobrenome:$sobrenome,
+            crm: $crm,
+            matricula: $matricula,
             cpf:$cpf,
             rg:$rg,
-            endereco: $endereco,
-            matricula: $matricula,
-            crm: $crm
+            endereco: $endereco
         );
     }
 }

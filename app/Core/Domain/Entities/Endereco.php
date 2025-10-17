@@ -6,12 +6,10 @@ namespace App\Core\Domain\Entities;
 
 class Endereco
 {
-
     public function __construct(
-        public readonly string $cep, 
+        public readonly string $cep,
         public readonly string $rua
-    )
-    {
+    ) {
 
     }
 }

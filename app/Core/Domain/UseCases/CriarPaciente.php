@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Core\Domain\UseCases;
@@ -17,16 +18,15 @@ class CriarPaciente
         Endereco $endereco,
         DateTime $data_nascimento,
         string $sexo,
-    ): Paciente
-    {
+    ): Paciente {
         return new Paciente(
             nome: $nome,
             sobrenome: $sobrenome,
             rg: $rg,
             cpf: $cpf,
             endereco: $endereco,
-            data_nascimento: $data_nascimento,
             sexo: $sexo,
+            data_nascimento: $data_nascimento,
         );
     }
 }
