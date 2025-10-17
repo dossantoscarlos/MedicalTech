@@ -10,7 +10,7 @@ use App\Core\Domain\UseCases\GerarMatricula;
 it('use case de cadastro de medico', function () {
     $matricula = (new GerarMatricula())->execute();
 
-    $endereco = new Endereco(cep:"45778989877", rua: "rua doutor");
+    $endereco = new Endereco(cep:'45778989877', rua: 'rua doutor');
 
     $newMedico = new Medico(
         nome:'carlos eduardo',

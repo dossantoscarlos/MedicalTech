@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Core\Domain\Entities;
@@ -29,12 +30,12 @@ class Paciente extends Pessoa
         );
     }
 
-    public function cep(): string 
+    public function cep(): string
     {
         return $this->endereco->cep;
     }
 
-    public function rua(): string 
+    public function rua(): string
     {
         return $this->endereco->rua;
     }

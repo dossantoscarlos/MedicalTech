@@ -10,12 +10,12 @@ class Funcionario extends Pessoa
      * Create a new class instance.
      */
     public function __construct(
-         string $nome,
-         string $sobrenome,
-         public readonly Matricula $matricula,
-         Endereco $endereco,
-         ?string $rg,
-         ?string $cpf,
+        string $nome,
+        string $sobrenome,
+        public readonly Matricula $matricula,
+        Endereco $endereco,
+        ?string $rg,
+        ?string $cpf,
     ) {
         parent::__construct(
             nome: $nome,
@@ -26,7 +26,7 @@ class Funcionario extends Pessoa
         );
     }
 
-    public function matricula() : string
+    public function matricula(): string
     {
         return $this->matricula->getMatricula();
     }
